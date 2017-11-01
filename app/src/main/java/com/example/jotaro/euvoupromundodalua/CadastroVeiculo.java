@@ -46,7 +46,7 @@ public class CadastroVeiculo extends AppCompatActivity {
 
         inicializaComponents();
 
-      //  if(intencao.getBundleExtra("veiculo") != null) {
+        if(intencao.getSerializableExtra("veiculo") != null) {
             veiculo = (Veiculo) intencao.getSerializableExtra("veiculo");
 
             etPlaca.setText(veiculo.getPlaca());
@@ -59,12 +59,12 @@ public class CadastroVeiculo extends AppCompatActivity {
             }
 
             spMarca.setSelection(posicaoMarca);
-            if(veiculo.getTipo().equals("semi-usado")){
-                rbSemi.setChecked(true);
-            } else if(veiculo.getTipo().equals("novo")) {
+            if(veiculo.getNovo()){
                 rbNovo.setChecked(true);
+            } else {
+                rbSemi.setChecked(true);
             }
-        //}
+        }
 
 
         btEnvia.setOnClickListener(new View.OnClickListener() {
