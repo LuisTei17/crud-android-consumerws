@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.jotaro.euvoupromundodalua.CadastroVeiculo">
+
+    <EditText android:id="@+id/etPlaca"
+        android:hint="Placa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText android:id="@+id/etCor"
+        android:hint="Cor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Spinner android:id="@+id/spMarca"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></Spinner>
+
+
+        <RadioGroup android:id="@+id/rgTipos"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <RadioButton android:id="@+id/rbNovo"
+                android:text="Novo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RadioButton android:id="@+id/rbSemiNovo"
+                android:layout_marginLeft="50dp"
+                android:text="Semi novo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+    <Button android:id="@+id/btEnviar"
+        android:text="Enviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
